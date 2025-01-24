@@ -13,7 +13,7 @@ class Candidato(models.Model):
             FileExtensionValidator(allowed_extensions=['pdf', 'doc', 'docx'])
         ]
     )
-    ip = models.GenericIPAddressField()
+    ip = models.GenericIPAddressField(protocol="IPv4")
     data_hora_envio = models.DateTimeField(default=now)
 
     def __str__(self):
