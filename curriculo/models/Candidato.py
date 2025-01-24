@@ -14,7 +14,7 @@ class Candidato(models.Model):
         ]
     )
     ip = models.GenericIPAddressField(protocol="IPv4")
-    data_hora_envio = models.DateTimeField(default=now)
+    data_hora_envio = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return f"{self.nome}"

@@ -1,15 +1,52 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enviar Currículo</title>
+    <link rel="stylesheet" href="{% static 'css/projeto.css' %}">
+    <script src="{% static 'js/projeto.js' %}" defer></script>
 </head>
 <body>
-    <header></header>
+    <header>
+        <figure><img src="{% static 'images/logo.jpg' %}" alt="Logo"></figure>
+    </header>
     <main>
-        <input type="file" name="arquivo" id="arquivo">
+        <h1>Enviar Currículo</h1>
+        <div class="forms">
+            <form method="POST" enctype="multipart/form-data" action="{% url 'curriculo-enviado' %}">
+                {% csrf_token %}
+                <label for="nome">Nome</label><br>
+                <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required maxlength="100"><br>
+                <label for="email">E-mail</label><br>
+                <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required maxlength="254"><br>
+                <label for="telefone">Telefone</label><br>
+                <input type="tel" name="telefone" id="telefone" placeholder="Digite seu número de telefone" required><br>
+                <label for="cargo_desejado">Cargo Desejado</label><br>
+                <input type="text" name="cargo_desejado" id="cargo_desejado" placeholder="Digite o cargo que deseja" required maxlength="100"><br>
+                <label for="escolaridade">Escolaridade</label><br>
+                <select name="escolaridade" id="escolaridade" required>
+                    <option value="" disabled selected>Escolha seu nível de escolaridade</option>
+                    <option value="Ensino Médio Incompleto">Ensino Médio Incompleto</option>
+                    <option value="Ensino Médio Completo">Ensino Médio Completo</option>
+                    <option value="Ensino Superior Incompleto">Ensino Superior Incompleto</option>
+                    <option value="Ensino Superior Completo">Ensino Superior Completo</option>
+                </select><br>
+                <label for="observacoes">Observações</label><br>
+                <textarea name="observacoes" id="observacoes" placeholder="Digite alguma observação caso tenha" maxlength="300"></textarea><br>
+                <label for="arquivo">Arquivo</label><br>
+                <span>O arquivo deve ter, no máximo, 1MB de tamanho, além de ser do formato .doc, .docx ou .pdf</span><br>
+                <button type="button" id="botao-add">+ Adicionar Arquivo</button>
+                <input type="file" name="arquivo" id="arquivo" required style="display: none;"  accept=".pdf, .doc, .docx" size="1MB"><br>
+                <div class="botao-send">
+                    <button type="submit" id="botao-enviar" disabled>Enviar</button>
+                </div>
+            </form>
+        </div>
     </main>
-    <footer></footer>
+    <footer>
+        <p>Copyright © UGTSIC 2025. Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>
