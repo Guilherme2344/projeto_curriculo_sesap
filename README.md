@@ -30,7 +30,7 @@
 3. Após isso, a tela do admin do django aparecerá. Nesse espaço, ao clicar em "Candidatos", podem ser feitas operações CRUD.
 
 # OBSERVAÇÕES IMPORTANTES!!!
-- Para visualizar o e-mail enviado, basta ir no console do cmd para isso. A estrutura aparecerá com vários (bastante mesmo) caracteres aleatórios, mas basta apenas rolar a página pra cima pra encontrar o formato de como o e-mail foi enviado. Esse formato foi escolhido por causa de segurança, já que a outra maneira de enviar e-mail (a maneira real de envio) deve-se colocar o e-mail e a senha reais. É importante ressaltar que o código que fiz não envia realmente um e-mail, apenas simula a estrutura de um e-mail enviado caso configurado da maneira funcional.
+- Para visualizar o e-mail enviado, basta checar a caixa de mensagens do e-mail cadastrado.
 - O uso da IA ChatGPT foi utilizado, em sua maioria, para obter os códigos necessários de JavaScript, uma vez que possuo conhecimento muito básico nessa linguagem. Ela também foi usada para outros propósitos, como pegar o ip do pc, como enviar e-mail, dentre outras coisas específicas que eu não tinha conhecimento.
 - Gostaria de deixar claro que os códigos em HTML e CSS foram feitos em uma proporção de 99% de código feita por mim e apenas 1% de código do ChatGPT. Quanto aos códigos em Python, essa proporção vai para 90% e 10%, respectivamente. Esses dados aproximados servem apenas para ilustrar que grande parte do código foi feita por mim.
 - As páginas são responsivas.
