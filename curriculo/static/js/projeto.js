@@ -14,8 +14,8 @@ if (window.location.pathname === '/curriculo/enviar-curriculo') {
             const size = file.size;
 
             // Limita o nome do arquivo a 100 caracteres
-            if (fileName.length > 100) {
-                button.textContent = fileName.substring(0, 100) + '...';
+            if (fileName.length > 50) {
+                button.textContent = fileName.substring(0, 50) + '...';
             } else {
                 button.textContent = fileName;
             }
@@ -55,6 +55,16 @@ if (window.location.pathname === '/curriculo/enviar-curriculo') {
         this.style.height = 'auto'; // Reseta a altura para calcular a altura correta
         this.style.height = (this.scrollHeight) + 'px'; // Ajusta a altura conforme o conteúdo
     });
+
+    // caracteres restantes
+    const observacoes = document.getElementById('observacoes');
+        const charCounter = document.getElementById('contador-char');
+        const maxLength = 300;
+
+        observacoes.addEventListener('input', () => {
+            const remaining = maxLength - observacoes.value.length;
+            charCounter.textContent = `${remaining} caracteres restantes`;
+        });
 
     // Função para verificar se todos os campos obrigatórios estão preenchidos
     function toggleSubmitButton() {

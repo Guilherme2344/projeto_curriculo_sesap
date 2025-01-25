@@ -4,16 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currículo Enviado</title>
+    <title>Erro</title>
     <link rel="stylesheet" href="{% static 'css/projeto.css' %}">
     <link rel="shortcut icon" href="{% static 'images/logo.jpg' %}" />
 </head>
 <body>
     <header></header>
-    <main class="enviado">
-        <figure><img src="{% static 'images/check.png' %}" alt="Check"></figure>
-        <h1>Currículo Enviado</h1>
-        <span>Um e-mail foi enviado para você com seus dados</span>
+    <main class="erro">
+        <figure><img src="{% static 'images/erro.png' %}" alt="Erro"></figure>
+        <h1>Houve um erro ao enviar o currículo</h1>
         <div class="botoes">
             <a href="{% url 'enviar-curriculo' %}"><button id="botao-voltar">Voltar</button></a>
             <a href="https://gti.saude.rn.gov.br/" target="_blank"><button id="botao-home">Página Inicial</button></a>

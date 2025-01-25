@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enviar Currículo</title>
     <link rel="stylesheet" href="{% static 'css/projeto.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/logo.jpg' %}" />
     <script src="{% static 'js/projeto.js' %}" defer></script>
 </head>
 <body>
@@ -27,13 +28,14 @@
                 <input type="text" name="cargo_desejado" id="cargo_desejado" placeholder="Digite o cargo que deseja" required maxlength="100"><br>
                 <label for="escolaridade">Escolaridade</label><br>
                 <select name="escolaridade" id="escolaridade" required>
-                    <option value="" disabled selected>Escolha seu nível de escolaridade</option>
+                    <option value="" disabled selected>Escolha seu nível escolar</option>
                     <option value="Ensino Médio Incompleto">Ensino Médio Incompleto</option>
                     <option value="Ensino Médio Completo">Ensino Médio Completo</option>
                     <option value="Ensino Superior Incompleto">Ensino Superior Incompleto</option>
                     <option value="Ensino Superior Completo">Ensino Superior Completo</option>
                 </select><br>
                 <label for="observacoes">Observações</label><br>
+                <span id="contador-char">300 caracteres restantes</span><br>
                 <textarea name="observacoes" id="observacoes" placeholder="Digite alguma observação caso tenha" maxlength="300"></textarea><br>
                 <label for="arquivo">Arquivo</label><br>
                 <span>O arquivo deve ter, no máximo, 1MB de tamanho, além de ser do formato .doc, .docx ou .pdf</span><br>
