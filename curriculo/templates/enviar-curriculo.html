@@ -42,7 +42,7 @@
                 <button type="button" id="botao-add">+ Adicionar Arquivo</button>
                 <input type="file" name="arquivo" id="arquivo" required style="display: none;"  accept=".pdf, .doc, .docx" size="1MB"><br>
                 <div class="botao-send">
-                    <button type="submit" id="botao-enviar" disabled>Enviar</button>
+                    <button type="submit" id="botao-enviar" onclick="processarEnvio(this)" disabled>Enviar</button>
                 </div>
             </form>
         </div>

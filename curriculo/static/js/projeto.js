@@ -98,4 +98,12 @@ if (window.location.pathname === '/curriculo/enviar-curriculo') {
 
     // Chama a função uma vez ao carregar a página
     window.addEventListener('load', toggleSubmitButton);
+
+    // função de botão enviando
+    const form = document.querySelector('form');
+    form.addEventListener('submit', function(event) {
+        const submitButton = document.getElementById('botao-enviar');
+        submitButton.disabled = true; // Desativa o botão
+        submitButton.textContent = "Enviando..."; // Altera o texto do botão
+    });
 }
