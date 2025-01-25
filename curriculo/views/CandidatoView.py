@@ -41,7 +41,7 @@ def curriculo_enviado(request, id=None):
         Atenciosamente,
         UGTSIC - SESAP/RN.
         """
-        from_email = 'noreply@gmail.com'
+        from_email = 'cristianoguilherme305@gmail.com'
         recipient_list = [email]
 
         try:
