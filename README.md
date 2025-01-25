@@ -9,6 +9,11 @@
 - Ambiente de Desenvolvimento: VS Code
 - Banco de Dados: SQLite
 
+## Requisitos
+- Conexão Wi-Fi.
+- PC com Windows.
+- Python instalado no pc.
+
 ## Tutorial de ativação do projeto
 1. Após baixar e extrair a pasta do projeto, entre na pasta e extraia o conteúdo do arquivo "venv.rar".
 2. Após extraído, entre na pasta "curriculo_admin" e extraia o banco de dados "db.rar". (OBS: caso apareça um arquivo de banco de dados ".sqlite3" sem você ter antes extraído o conteúdo de "db.rar", exclua esse banco de dados e extraia normalmente o "db.rar")
