@@ -14,6 +14,7 @@
         <figure><img src="{% static 'images/check.png' %}" alt="Check"></figure>
         <h1>Currículo Enviado</h1>
         <span>Um e-mail foi enviado para você com seus dados</span>
+        <span>Data e hora de envio: {{data_hora_envio}}</span>
         <div class="botoes">
             <a href="{% url 'enviar-curriculo' %}"><button id="botao-voltar">Voltar</button></a>
             <a href="https://gti.saude.rn.gov.br/" target="_blank"><button id="botao-home">Página Inicial</button></a>
