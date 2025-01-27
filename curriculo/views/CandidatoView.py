@@ -16,6 +16,7 @@ def inserir_curriculo(request):
     return render(request, template_name="enviar-curriculo.html",  status=200)
 
 def curriculo_enviado(request, id=None):
+    data_hora_envio = timezone.now()
     if request.method == 'POST':
         nome = request.POST.get("nome")
         email = request.POST.get("email")
@@ -60,7 +61,7 @@ def curriculo_enviado(request, id=None):
                 escolaridade=escolaridade,
                 observacoes=observacoes,
                 ip=pegar_ip(request),
-                data_hora_envio=timezone.now(),
+                data_hora_envio=data_hora_envio,
                 arquivo=arquivo.name if arquivo else None
             )
 
@@ -70,7 +71,6 @@ def curriculo_enviado(request, id=None):
                 obj_candidato.arquivo = nome_arquivo
 
             obj_candidato.save()
-
             print(f"Candidato {nome} inserido com sucesso!")
 
         except Exception as e:
@@ -79,7 +79,7 @@ def curriculo_enviado(request, id=None):
 
         return redirect("curriculo-enviado")
 
-    return render(request, "curriculo-enviado.html", status=200)
+    return render(request, "curriculo-enviado.html", context={'data_hora_envio': data_hora_envio}, status=200)
 
 def erro_curriculo(request):
     return render(request, "erro-curriculo.html", status=200)
